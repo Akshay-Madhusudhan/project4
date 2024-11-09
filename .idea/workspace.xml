@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/BBQChicken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Crust.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Deluxe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Meatzza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/PizzaFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/Topping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/hello-view.fxml" afterDir="false" />
+    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="Setup for project4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Akshay-Madhusudhan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Akshay-Madhusudhan/project4.git",
+    "accountId": "d90362cc-4492-4401-93fc-37e8e70fe7c7"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -82,6 +70,30 @@
       <option name="presentableId" value="Default" />
       <updated>1731169455896</updated>
     </task>
+    <task id="LOCAL-00001" summary="Setup for project4">
+      <option name="closed" value="true" />
+      <created>1731172413932</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731172413934</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Setup for project4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup for project4" />
   </component>
 </project>

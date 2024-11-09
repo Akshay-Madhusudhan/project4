@@ -3,14 +3,14 @@ package project4;
 public class BuildYourOwn extends Pizza{
     private int numToppings;
     private int additionalToppings;
-    final static int MIN_TOPPING = 1;
-    final static int MAX_TOPPING = 7;
-    final static double EXTRA_TOPPING = 1.69;
+    final static int MIN = 1;
+    final static int MAX = 7;
+    final static double EXTRA = 1.69;
 
     public boolean add(Object obj){
         this.numToppings = getToppings().size();
         Topping newTopping = (Topping) obj;
-        if(numToppings==MAX_TOPPING){
+        if(numToppings==MAX){
             return false;
         }
         this.addTopping(newTopping);
@@ -20,7 +20,7 @@ public class BuildYourOwn extends Pizza{
 
     public boolean remove(Object obj){
         this.numToppings = getToppings().size();
-        if(numToppings==MIN_TOPPING){
+        if(numToppings==MIN){
             return false;
         }
         Topping toRemove = (Topping) obj;
@@ -47,7 +47,7 @@ public class BuildYourOwn extends Pizza{
                 throw new IllegalArgumentException();
         }
         if(additionalToppings>0){
-            price += (additionalToppings*EXTRA_TOPPING);
+            price += (additionalToppings*EXTRA);
         }
         return price;
     }

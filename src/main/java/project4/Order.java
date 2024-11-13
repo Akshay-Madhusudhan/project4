@@ -5,4 +5,41 @@ import java.util.ArrayList;
 public class Order {
     private int number;
     private ArrayList<Pizza> pizzas;
+    public static final double TAX = 1.06625;
+    private static int COUNT = 0;
+
+    public Order(){
+        this.number = ++COUNT;
+        this.pizzas = new ArrayList<>();
+    }
+
+    public int getNumber(){
+        return this.number;
+    }
+
+    public ArrayList<Pizza> getPizzas(){
+        return this.pizzas;
+    }
+
+    public Pizza findPizza(Pizza pizza){
+        for(Pizza p : pizzas){
+            if(p.equals(pizza)){
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public double getSubTotal(){
+        double price = 0;
+        for(Pizza p : pizzas){
+            price += p.price();
+        }
+        return price;
+    }
+
+    public double getTotal(){
+        return getSubTotal()*TAX;
+    }
+
 }

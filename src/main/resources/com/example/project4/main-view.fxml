@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.MainViewController">
+   <children>
+      <GridPane layoutX="15.0" layoutY="12.0" prefHeight="375.0" prefWidth="569.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Pizza Builder" textFill="#d73535" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="typeBox" prefWidth="150.0" promptText="Choose type" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label text="Type" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Style" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sizeLabel" text="Size" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="styleBox" prefWidth="150.0" promptText="Choose style" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <ComboBox fx:id="sizeBox" prefWidth="150.0" promptText="Choose size" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="buildYourOwnButton" mnemonicParsing="false" text="Build Your Own" GridPane.halignment="CENTER" />
+            <Button fx:id="buildPizzaButton" mnemonicParsing="false" onAction="#buildPizza" text="Build Pizza" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ListView fx:id="toppingsListView" prefHeight="52.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Comes with toppings:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Button mnemonicParsing="false" text="View Orders" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Tax:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="35.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Total:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="totalLabel" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="subtotalLabel" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="70.0" right="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="6.625%" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="35.0" right="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Subtotal:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="70.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

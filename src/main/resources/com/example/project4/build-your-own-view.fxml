@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.project4.BuildYourOwnController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.BuildYourOwnController">
+   <children>
+      <Label layoutX="79.0" layoutY="111.0" text="Toppings">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="37.0" text="Type">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="type" layoutX="39.0" layoutY="70.0" onAction="#onTypeAction" prefWidth="150.0" promptText="Choose type" />
+      <VBox alignment="CENTER_LEFT" layoutX="64.0" layoutY="144.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <CheckBox fx:id="BBQchicken" mnemonicParsing="false" text="BBQ Chicken" />
+            <CheckBox fx:id="Beef" mnemonicParsing="false" text="Beef" />
+            <CheckBox fx:id="Cheddar" mnemonicParsing="false" text="Cheddar" />
+            <CheckBox fx:id="GreenPepper" mnemonicParsing="false" text="Green Pepper" />
+            <CheckBox fx:id="Ham" mnemonicParsing="false" text="Ham" />
+            <CheckBox fx:id="Mushroom" mnemonicParsing="false" text="Mushroom" />
+            <CheckBox fx:id="Olives" mnemonicParsing="false" text="Olives" />
+            <CheckBox fx:id="Onion" mnemonicParsing="false" text="Onion" />
+            <CheckBox fx:id="Pepperoni" mnemonicParsing="false" text="Pepperoni" />
+            <CheckBox fx:id="Pineapple" mnemonicParsing="false" text="Pineapple" />
+            <CheckBox fx:id="Provolone" mnemonicParsing="false" text="Provolone" />
+            <CheckBox fx:id="Sausage" mnemonicParsing="false" text="Sausage" />
+            <CheckBox fx:id="Spinach" mnemonicParsing="false" text="Spinach" />
+         </children>
+      </VBox>
+      <Button fx:id="addToppingButton" layoutX="199.0" layoutY="187.0" mnemonicParsing="false" onAction="#onAddToppingButtonClick" text="Add Toppings" />
+      <Button fx:id="removeToppingButton" layoutX="188.0" layoutY="231.0" mnemonicParsing="false" onAction="#onRemoveToppingButtonClick" text="Remove Toppings" />
+      <Button fx:id="buildPizzaButton" layoutX="418.0" layoutY="326.0" mnemonicParsing="false" onAction="#onBuildPizzaButtonClick" text="Build Pizza" />
+      <Label layoutX="439.0" layoutY="41.0" text="Size">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="size" layoutX="379.0" layoutY="70.0" onAction="#onSizeAction" prefWidth="150.0" promptText="Choose size" />
+      <ListView fx:id="currToppings" layoutX="354.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
 </AnchorPane>

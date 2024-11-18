@@ -1,24 +1,32 @@
 package com.example.project4;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import project4.ChicagoPizza;
-import project4.NYPizza;
-import project4.Pizza;
-import project4.PizzaFactory;
+import javafx.stage.Stage;
+import project4.*;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class MainViewController {
-    ArrayList<Pizza> pizzas = new ArrayList<>();
+    Order pizzasOrdered = Order.getInstance();
 
     DecimalFormat df = new DecimalFormat("#,###.00");
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML private ComboBox<String> typeBox;
     @FXML private ComboBox<String> styleBox;
@@ -34,6 +42,7 @@ public class MainViewController {
     @FXML private ImageView pizzaImageView;
 
     @FXML private ListView<String> toppingsListView;
+
 
     @FXML
     public void initialize() {
@@ -51,6 +60,17 @@ public class MainViewController {
         typeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         styleBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         sizeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
+    }
+
+    @FXML
+    protected void onBuildYourOwnClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("build-your-own-view.fxml"));
+        root = loader.load();
+        BuildYourOwnController buildYourOwnController = loader.getController();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void checkBoxSelections() {
@@ -72,7 +92,7 @@ public class MainViewController {
     }
 
     @FXML
-    private void buildPizza(){
+    protected void buildPizza(){
         PizzaFactory pizzaFactory;
         Pizza pizza;
 
@@ -82,9 +102,9 @@ public class MainViewController {
             pizzaFactory = new ChicagoPizza();
         }
 
-        if(typeBox.getValue().equals("Deluxe")) {
+        if(typeBox.getValue().equalsIgnoreCase("Deluxe")) {
             pizza = pizzaFactory.createDeluxe();
-        } else if (typeBox.getValue().equals("BBQ Chicken")) {
+        } else if (typeBox.getValue().equalsIgnoreCase("BBQ Chicken")) {
             pizza = pizzaFactory.createBBQChicken();
         } else {
             pizza = pizzaFactory.createMeatzza();
@@ -105,19 +125,14 @@ public class MainViewController {
         toppingsListView.getItems().clear();
         pizzaImageView.setImage(null);
 
-        pizzas.add(pizza);
+        pizzasOrdered.getPizzas().add(pizza);
 
         displayTotal();
     }
 
-    private void displayTotal(){
-        double subtotal = 0;
-        double total = 0;
-        double taxFactor = 1.06625;
-        for(int i = 0; i < pizzas.size(); i++){
-            subtotal += pizzas.get(i).price();
-        }
-        total = subtotal * taxFactor;
+    protected void displayTotal(){
+        double subtotal = pizzasOrdered.getSubTotal();
+        double total = pizzasOrdered.getTotal();
         subtotalLabel.setText("$" + df.format(subtotal));
         totalLabel.setText("$" + df.format(total));
     }

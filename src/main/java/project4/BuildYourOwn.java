@@ -2,7 +2,6 @@ package project4;
 
 public class BuildYourOwn extends Pizza{
     private int numToppings;
-    private int additionalToppings;
     final static int MIN = 1;
     final static int MAX = 7;
     final static double EXTRA = 1.69;
@@ -14,7 +13,7 @@ public class BuildYourOwn extends Pizza{
             return false;
         }
         this.addTopping(newTopping);
-        this.additionalToppings++;
+        this.numToppings++;
         return true;
     }
 
@@ -25,7 +24,7 @@ public class BuildYourOwn extends Pizza{
         }
         Topping toRemove = (Topping) obj;
         this.removeTopping(toRemove);
-        this.additionalToppings--;
+        this.numToppings--;
         return true;
     }
 
@@ -46,8 +45,8 @@ public class BuildYourOwn extends Pizza{
             default:
                 throw new IllegalArgumentException();
         }
-        if(additionalToppings>0){
-            price += (additionalToppings*EXTRA);
+        if(numToppings>0){
+            price += (numToppings*EXTRA);
         }
         return price;
     }

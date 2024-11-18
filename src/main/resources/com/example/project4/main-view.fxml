@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.MainViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.MainViewController">
    <children>
       <GridPane layoutX="15.0" layoutY="12.0" prefHeight="375.0" prefWidth="569.0">
         <columnConstraints>
@@ -50,7 +50,7 @@
             </Label>
             <ComboBox fx:id="styleBox" prefWidth="150.0" promptText="Choose style" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <ComboBox fx:id="sizeBox" prefWidth="150.0" promptText="Choose size" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="buildYourOwnButton" mnemonicParsing="false" text="Build Your Own" GridPane.halignment="CENTER" />
+            <Button fx:id="buildYourOwnButton" mnemonicParsing="false" onAction="#onBuildYourOwnClick" text="Build Your Own" GridPane.halignment="CENTER" />
             <Button fx:id="buildPizzaButton" mnemonicParsing="false" onAction="#buildPizza" text="Build Pizza" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <ListView fx:id="toppingsListView" prefHeight="52.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Comes with toppings:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />

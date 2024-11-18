@@ -20,7 +20,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class MainViewController {
-    Order pizzasOrdered = Order.getInstance();
+    public static Order pizzasOrdered = Order.getInstance();
+    public static StoreOrders allOrders = StoreOrders.getInstance();
 
     DecimalFormat df = new DecimalFormat("#,###.00");
 
@@ -42,6 +43,7 @@ public class MainViewController {
     @FXML private ImageView pizzaImageView;
 
     @FXML private ListView<String> toppingsListView;
+    @FXML private Button viewOrdersButton;
 
 
     @FXML
@@ -60,6 +62,7 @@ public class MainViewController {
         typeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         styleBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         sizeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
+        displayTotal();
     }
 
     @FXML
@@ -67,6 +70,16 @@ public class MainViewController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("build-your-own-view.fxml"));
         root = loader.load();
         BuildYourOwnController buildYourOwnController = loader.getController();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void onViewOrdersButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("orders-view.fxml"));
+        root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

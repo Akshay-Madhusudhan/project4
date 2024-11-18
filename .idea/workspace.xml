@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="prevent merge issue">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/project4/StoreOrders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project4/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/build-your-own-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/build-your-own-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/hello-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/orders-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/orders-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +33,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,12 +47,12 @@
     &quot;assignee&quot;: &quot;Akshay-Madhusudhan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Akshay-Madhusudhan/project4.git&quot;,
-    &quot;accountId&quot;: &quot;ce5174eb-2cc3-4ac6-955b-8410c1dd532c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Akshay-Madhusudhan/project4.git",
+    "accountId": "d90362cc-4492-4401-93fc-37e8e70fe7c7"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -63,6 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.MainApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -92,8 +102,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.project4.HelloApplication" />
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.project4.MainApplication" />
       <module name="project4" />
       <extension name="coverage">
         <pattern>
@@ -107,17 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

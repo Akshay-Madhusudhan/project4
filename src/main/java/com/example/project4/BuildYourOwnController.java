@@ -9,10 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import project4.*;
 
@@ -58,7 +56,11 @@ public class BuildYourOwnController {
     @FXML
     private Button buildPizzaButton;
     @FXML
+    private Button goBackButton;
+    @FXML
     private ListView<Topping> currToppings = new ListView<>();
+    @FXML
+    private Label warningLabel;
 
     private ObservableList<Topping> toppings = FXCollections.observableArrayList();
     private ArrayList<CheckBox> chkBoxes = new ArrayList<>();
@@ -78,6 +80,7 @@ public class BuildYourOwnController {
         for(CheckBox chk : chkBoxes){
             chk.setDisable(true);
         }
+        warningLabel.setVisible(false);
         initializeType();
         initializeSize();
         updateBuildPizzaButton(buildPizzaButton);
@@ -128,7 +131,9 @@ public class BuildYourOwnController {
             }
         }
         if(count>7 || count<1 || (count+toppings.size())>7){
-            System.out.println("Min is 1 and Max is 7");
+            warningLabel.setText("Max toppings allowed is 7, and must add at least 1.");
+            warningLabel.setTextFill(Color.RED);
+            warningLabel.setVisible(true);
         } else {
             for(CheckBox chk : chkBoxes){
                 if(chk.isSelected()){
@@ -138,6 +143,9 @@ public class BuildYourOwnController {
                     toppings.add(Topping.valueOf(chk.getId().toUpperCase()));
                 }
             }
+            warningLabel.setText("Toppings Added!");
+            warningLabel.setTextFill(Color.GREEN);
+            warningLabel.setVisible(true);
         }
     }
 
@@ -150,13 +158,18 @@ public class BuildYourOwnController {
             }
         }
         if(toppings.isEmpty() || count>toppings.size()){
-            System.out.println("Selected check boxes are greater than # of toppings.");
+            warningLabel.setText("No toppings to remove or attempting to remove more toppings than available.");
+            warningLabel.setTextFill(Color.RED);
+            warningLabel.setVisible(true);
         } else {
             for(CheckBox chk : chkBoxes){
                 if(chk.isSelected()){
                     toppings.remove(Topping.valueOf(chk.getId().toUpperCase()));
                 }
             }
+            warningLabel.setText("Toppings Removed!");
+            warningLabel.setTextFill(Color.GREEN);
+            warningLabel.setVisible(true);
         }
     }
 
@@ -184,7 +197,7 @@ public class BuildYourOwnController {
             ((BuildYourOwn)pizza).add(t);
         }
 
-        mainViewController.pizzasOrdered.getPizzas().add(pizza);
+        MainViewController.pizzasOrdered.getPizzas().add(pizza);
 
         type.setValue(null);
         size.setValue(null);
@@ -196,6 +209,16 @@ public class BuildYourOwnController {
         scene = new Scene(root);
         stage.setScene(scene);
         mainViewController.displayTotal();
+        stage.show();
+    }
+
+    @FXML
+    protected void onGoBackButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
         stage.show();
     }
 }

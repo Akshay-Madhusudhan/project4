@@ -8,6 +8,7 @@ public class NYPizza implements PizzaFactory{
     public Pizza createDeluxe(){
         pizza = new Deluxe();
         pizza.setCrust("BROOKLYN");
+        pizza.setType("New York");
         return pizza;
     }
 
@@ -15,6 +16,7 @@ public class NYPizza implements PizzaFactory{
     public Pizza createBBQChicken(){
         pizza = new BBQChicken();
         pizza.setCrust("THIN");
+        pizza.setType("New York");
         return pizza;
     }
 
@@ -22,6 +24,7 @@ public class NYPizza implements PizzaFactory{
     public Pizza createMeatzza(){
         pizza = new Meatzza();
         pizza.setCrust("HANDTOSSED");
+        pizza.setType("New York");
         return pizza;
     }
 
@@ -29,6 +32,7 @@ public class NYPizza implements PizzaFactory{
     public Pizza createBuildYourOwn(){
         pizza = new BuildYourOwn();
         pizza.setCrust("HANDTOSSED");
+        pizza.setType("New York");
         return pizza;
     }
 

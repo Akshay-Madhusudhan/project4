@@ -54,7 +54,7 @@
             <Button fx:id="buildPizzaButton" mnemonicParsing="false" onAction="#buildPizza" text="Build Pizza" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <ListView fx:id="toppingsListView" prefHeight="52.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Comes with toppings:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-            <Button mnemonicParsing="false" text="View Orders" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="viewOrdersButton" mnemonicParsing="false" onAction="#onViewOrdersButtonClick" text="View Current Order" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
             <Label text="Tax:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="35.0" />
@@ -86,6 +86,7 @@
                   <Insets bottom="-100.0" />
                </GridPane.margin>
             </ImageView>
+            <Button mnemonicParsing="false" text="View All Orders" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

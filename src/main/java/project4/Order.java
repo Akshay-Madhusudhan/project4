@@ -18,7 +18,7 @@ public class Order {
         return this.number;
     }
 
-    public static Order getInstance(){
+    public static synchronized Order getInstance(){
         if(instance==null){
             instance = new Order();
         }

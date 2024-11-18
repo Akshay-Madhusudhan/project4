@@ -6,6 +6,7 @@ public abstract class Pizza{
     private ArrayList<Topping> toppings = new ArrayList<>();
     private Crust crust;
     private Size size;
+    private String type;
     public abstract double price();
 
     public void addTopping(Topping newTopping){
@@ -14,6 +15,14 @@ public abstract class Pizza{
 
     public void removeTopping(Topping toRemove){
         this.toppings.remove(toRemove);
+    }
+
+    public void setType(String t){
+        this.type = t;
+    }
+
+    public String getType(){
+        return this.type;
     }
 
     public void setCrust(String crust){
@@ -36,12 +45,31 @@ public abstract class Pizza{
         return this.toppings;
     }
 
+    public double getSubTotal(){
+        double price = this.price();
+        return price;
+    }
+
     public String toppingToString(){
-        String toppingStr = "";
+        StringBuilder toppingStr = new StringBuilder();
         for(Topping topping : this.toppings){
-            toppingStr = toppingStr + ", " + topping;
+            toppingStr.append(topping).append(", ");
         }
+        toppingStr.replace(toppingStr.lastIndexOf(","), toppingStr.lastIndexOf(" "), "");
         return "Toppings: " + toppingStr;
+    }
+
+    public String getStyle(){
+        if(this instanceof BBQChicken){
+            return "BBQChicken";
+        } else if(this instanceof BuildYourOwn){
+            return "BuildYourOwn Pizza";
+        } else if(this instanceof Deluxe){
+            return "Deluxe Pizza";
+        } else if(this instanceof Meatzza){
+            return "Meatzza Pizza";
+        }
+        return null;
     }
 
     @Override

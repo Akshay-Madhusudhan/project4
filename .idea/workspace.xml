@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="some setup tweaking">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/build-your-own-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/orders-view.fxml" afterDir="false" />
+    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="Main view GUI">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bbqchickenchi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bbqchickenny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/deluxechi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/deluxeny.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/meatzzachi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/meatzzany.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +39,12 @@
     &quot;assignee&quot;: &quot;Akshay-Madhusudhan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Akshay-Madhusudhan/project4.git",
-    "accountId": "ce5174eb-2cc3-4ac6-955b-8410c1dd532c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Akshay-Madhusudhan/project4.git&quot;,
+    &quot;accountId&quot;: &quot;ce5174eb-2cc3-4ac6-955b-8410c1dd532c&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -60,25 +61,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\8npem\Downloads\project4\src\main\java\com\example\project4\images" />
+      <recent name="C:\Users\8npem\Downloads\project4\src\main\resources\images" />
       <recent name="C:\Users\8npem\Downloads\project4\src\main\java\com\example\project4" />
+      <recent name="C:\Users\8npem\Downloads\project4\src\main\java\com\example\project4\images" />
       <recent name="C:\Users\8npem\Downloads\project4\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -121,7 +127,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731169455896</updated>
-      <workItem from="1731807869999" duration="12231000" />
+      <workItem from="1731807869999" duration="14743000" />
+      <workItem from="1731890435790" duration="35000" />
+      <workItem from="1731890474388" duration="918000" />
+      <workItem from="1731891404809" duration="2509000" />
     </task>
     <task id="LOCAL-00001" summary="Setup for project4">
       <option name="closed" value="true" />
@@ -139,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731173386887</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Main view GUI">
+      <option name="closed" value="true" />
+      <created>1731821661560</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731821661560</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup for project4" />
     <MESSAGE value="some setup tweaking" />
-    <option name="LAST_COMMIT_MESSAGE" value="some setup tweaking" />
+    <MESSAGE value="Main view GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main view GUI" />
   </component>
 </project>

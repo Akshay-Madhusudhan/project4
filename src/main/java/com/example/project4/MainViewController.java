@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import project4.ChicagoPizza;
 import project4.NYPizza;
 import project4.Pizza;
@@ -29,6 +31,8 @@ public class MainViewController {
     @FXML private Label subtotalLabel;
     @FXML private Label totalLabel;
 
+    @FXML private ImageView pizzaImageView;
+
     @FXML private ListView<String> toppingsListView;
 
     @FXML
@@ -40,6 +44,10 @@ public class MainViewController {
         sizeLabel.setVisible(false);
         buildPizzaButton.setDisable(true);
 
+        Image pizzaImage = new Image(getClass().getResource("/images/deluxechi.jpg").toString(), true);
+        pizzaImageView.setImage(pizzaImage);
+        pizzaImageView.setVisible(false);
+
         typeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         styleBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
         sizeBox.valueProperty().addListener((obs, oldVal, newVal) -> checkBoxSelections());
@@ -50,6 +58,7 @@ public class MainViewController {
             sizeBox.setVisible(true);
             sizeLabel.setVisible(true);
             displayToppings();
+            displayPizzaImage();
         } else {
             sizeBox.setVisible(false);
             sizeLabel.setVisible(false);
@@ -94,6 +103,7 @@ public class MainViewController {
         sizeBox.setValue(null);
         buildPizzaButton.setDisable(true);
         toppingsListView.getItems().clear();
+        pizzaImageView.setImage(null);
 
         pizzas.add(pizza);
 
@@ -120,6 +130,45 @@ public class MainViewController {
             toppingsListView.getItems().addAll("BBQ Chicken", "Green Pepper", "Provolone", "Cheddar");
         } else if (typeBox.getValue().equals("Meatzza")) {
             toppingsListView.getItems().addAll("Sausage", "Pepperoni", "Beef", "Ham");
+        }
+    }
+
+    private void displayPizzaImage(){
+        if(typeBox.getValue().equals("Deluxe")) {
+            if(styleBox.getValue().equals("New York")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/deluxeny.jpg").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
+            else if (styleBox.getValue().equals("Chicago")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/deluxechi.jpg").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
+        }
+        else if(typeBox.getValue().equals("BBQ Chicken")) {
+            if(styleBox.getValue().equals("New York")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/bbqchickenny.png").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
+            else if (styleBox.getValue().equals("Chicago")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/bbqchickenchi.jpg").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
+        }
+        else if(typeBox.getValue().equals("Meatzza")) {
+            if(styleBox.getValue().equals("New York")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/meatzzany.jpg").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
+            else if (styleBox.getValue().equals("Chicago")) {
+                Image pizzaImage = new Image(getClass().getResource("/images/meatzzachi.jpg").toString(), true);
+                pizzaImageView.setImage(pizzaImage);
+                pizzaImageView.setVisible(true);
+            }
         }
     }
 }

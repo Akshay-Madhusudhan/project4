@@ -55,7 +55,6 @@
             <ListView fx:id="toppingsListView" prefHeight="52.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Comes with toppings:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
             <Button mnemonicParsing="false" text="View Orders" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Tax:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="35.0" />
@@ -82,6 +81,11 @@
                   <Insets bottom="70.0" />
                </GridPane.margin>
             </Label>
+            <ImageView fx:id="pizzaImageView" fitHeight="127.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="-100.0" />
+               </GridPane.margin>
+            </ImageView>
          </children>
       </GridPane>
    </children>

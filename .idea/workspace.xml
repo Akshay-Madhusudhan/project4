@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/StoreOrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/store-orders-view.fxml" afterDir="false" />
+    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="Implemented StoreOrdersController and store-orders-view.fxml">
+      <change afterPath="$PROJECT_DIR$/src/test/java/project4/BuildYourOwnTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/BuildYourOwn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
         <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -61,8 +60,13 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.MainApplication.executor": "Run",
+    "JUnit.BuildYourOwnTest.addTest.executor": "Run",
+    "JUnit.BuildYourOwnTest.executor": "Run",
+    "JUnit.BuildYourOwnTest.removeTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/aksha/IdeaProjects/project3",
@@ -85,11 +89,17 @@
       <recent name="C:\Users\8npem\Downloads\project4\src\main\java\com\example\project4\images" />
       <recent name="C:\Users\8npem\Downloads\project4\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="project4" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BuildYourOwnTest.removeTest">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.project4.MainApplication" />
       <module name="project4" />
@@ -103,8 +113,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BuildYourOwnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project4" />
+      <option name="MAIN_CLASS_NAME" value="project4.BuildYourOwnTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuildYourOwnTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project4" />
+      <option name="MAIN_CLASS_NAME" value="project4.BuildYourOwnTest" />
+      <option name="METHOD_NAME" value="addTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuildYourOwnTest.removeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project4" />
+      <option name="MAIN_CLASS_NAME" value="project4.BuildYourOwnTest" />
+      <option name="METHOD_NAME" value="removeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuildYourOwnTest.removeTest" />
+        <item itemvalue="JUnit.BuildYourOwnTest" />
+        <item itemvalue="JUnit.BuildYourOwnTest.addTest" />
         <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
@@ -154,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731954873633</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented StoreOrdersController and store-orders-view.fxml">
+      <option name="closed" value="true" />
+      <created>1731959258525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731959258525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +244,7 @@
     <MESSAGE value="some setup tweaking" />
     <MESSAGE value="Main view GUI" />
     <MESSAGE value="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information" />
+    <MESSAGE value="Implemented StoreOrdersController and store-orders-view.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented StoreOrdersController and store-orders-view.fxml" />
   </component>
 </project>

@@ -7,6 +7,9 @@ public class BuildYourOwn extends Pizza{
     final static double EXTRA = 1.69;
 
     public boolean add(Object obj){
+        if(!(obj instanceof Topping)){
+            return false;
+        }
         this.numToppings = getToppings().size();
         Topping newTopping = (Topping) obj;
         if(numToppings==MAX){
@@ -18,8 +21,11 @@ public class BuildYourOwn extends Pizza{
     }
 
     public boolean remove(Object obj){
+        if(!(obj instanceof Topping)){
+            return false;
+        }
         this.numToppings = getToppings().size();
-        if(numToppings==MIN){
+        if(numToppings<=MIN){
             return false;
         }
         Topping toRemove = (Topping) obj;

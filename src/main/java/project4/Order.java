@@ -6,10 +6,10 @@ public class Order {
     private int number;
     private ArrayList<Pizza> pizzas;
     public static final double TAX = 1.06625;
-    private static int COUNT = 0;
+    private static int pizzaNumber = 0;
 
     public Order(){
-        this.number = ++COUNT;
+        this.number = ++pizzaNumber;
         this.pizzas = new ArrayList<>();
     }
 

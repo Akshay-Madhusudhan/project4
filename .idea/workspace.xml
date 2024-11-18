@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="some setup tweaking">
+    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="finished setup of all classes, need to implement GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/BBQChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/BBQChicken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Deluxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Deluxe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Meatzza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Meatzza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project4/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731173386887</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished setup of all classes, need to implement GUI">
+      <option name="closed" value="true" />
+      <created>1731540246479</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731540246479</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup for project4" />
     <MESSAGE value="some setup tweaking" />
-    <option name="LAST_COMMIT_MESSAGE" value="some setup tweaking" />
+    <MESSAGE value="finished setup of all classes, need to implement GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished setup of all classes, need to implement GUI" />
   </component>
 </project>

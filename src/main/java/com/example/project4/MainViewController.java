@@ -17,7 +17,6 @@ import project4.*;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 public class MainViewController {
     public static Order pizzasOrdered = Order.getInstance();
@@ -43,6 +42,7 @@ public class MainViewController {
     @FXML private ImageView pizzaImageView;
 
     @FXML private ListView<String> toppingsListView;
+    @FXML private Button viewCurrOrderButton;
     @FXML private Button viewOrdersButton;
 
 
@@ -77,7 +77,17 @@ public class MainViewController {
     }
 
     @FXML
-    protected void onViewOrdersButtonClick(ActionEvent event) throws IOException {
+    protected void onViewOrdersButtonClick(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("store-orders-view.fxml"));
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void onViewCurrOrderButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("orders-view.fxml"));
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

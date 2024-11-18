@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="prevent merge issue">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project4/StoreOrders.java" afterDir="false" />
+    <list default="true" id="3129ce1f-ea42-4a21-bf8a-35f27963bd7a" name="Changes" comment="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/StoreOrdersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/store-orders-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/BuildYourOwnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/HelloController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/project4/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/ChicagoPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/NYPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project4/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/build-your-own-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/build-your-own-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/hello-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/project4/orders-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/project4/orders-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731821661560</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information">
+      <option name="closed" value="true" />
+      <created>1731954873633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731954873633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +175,7 @@
     <MESSAGE value="Setup for project4" />
     <MESSAGE value="some setup tweaking" />
     <MESSAGE value="Main view GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main view GUI" />
+    <MESSAGE value="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented OrdersController and tweaked MainViewController to allow easier sharing of information" />
   </component>
 </project>

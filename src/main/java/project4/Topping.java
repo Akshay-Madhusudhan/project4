@@ -1,5 +1,9 @@
 package project4;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public enum Topping {
     BBQCHICKEN,
     BEEF,

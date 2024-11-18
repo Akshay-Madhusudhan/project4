@@ -1,7 +1,14 @@
 package project4;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class BBQChicken extends Pizza{
 
+    /**
+     * Constructor with appropriate Toppings for BBQChicken Pizza instance
+     */
     BBQChicken(){
         addTopping(Topping.BBQCHICKEN);
         addTopping(Topping.GREENPEPPER);
@@ -9,19 +16,17 @@ public class BBQChicken extends Pizza{
         addTopping(Topping.CHEDDAR);
     }
 
+    /**
+     * @return String conversion of the BBQChicken object
+     */
     @Override
     public String toString(){
         return super.toString();
     }
 
-    public boolean add(Topping topping){
-        return false;
-    }
-
-    public boolean remove(Topping topping){
-        return false;
-    }
-
+    /**
+     * @return Double price to two decimal places, depending on size of the pizza
+     */
     @Override
     public double price(){
         double price = 0;

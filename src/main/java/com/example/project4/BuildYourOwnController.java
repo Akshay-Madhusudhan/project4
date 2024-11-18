@@ -18,6 +18,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class BuildYourOwnController {
     @FXML
     private ComboBox<String> type;
@@ -69,7 +73,9 @@ public class BuildYourOwnController {
     private Scene scene;
     private Parent root;
 
-
+    /**
+     * Called on controller startup, sets all view elements to starting configuration
+     */
     @FXML
     protected void initialize(){
         toppings.addListener((ListChangeListener<Topping>)change->updateBuildPizzaButton(buildPizzaButton));
@@ -87,6 +93,10 @@ public class BuildYourOwnController {
         currToppings.setItems(toppings);
     }
 
+    /**
+     * @param button The button to be updated
+     * Method to update the "build pizza" button when an incorrect number of toppings is selected
+     */
     private void updateBuildPizzaButton(Button button){
         if(toppings.isEmpty() || toppings.size()>7){
             button.setDisable(true);
@@ -95,17 +105,26 @@ public class BuildYourOwnController {
         }
     }
 
+    /**
+     * Method to initialize the type ComboBox
+     */
     @FXML
     protected void initializeType(){
         type.getItems().add("Chicago Pizza");
         type.getItems().add("NY Pizza");
     }
 
+    /**
+     * Method to re-enable the size ComboBox when an option from the type ComboBox is selected
+     */
     @FXML
     protected void onTypeAction(){
         size.setDisable(false);
     }
 
+    /**
+     * Method to enable the toppings CheckBoxes when an option from the size ComboBox is selected
+     */
     @FXML
     protected void onSizeAction(){
         for(CheckBox chk : chkBoxes){
@@ -115,6 +134,9 @@ public class BuildYourOwnController {
         removeToppingButton.setDisable(false);
     }
 
+    /**
+     * Method to add size options to the size ComboBox
+     */
     @FXML
     protected void initializeSize(){
         for(Size s : Size.values()){
@@ -122,6 +144,9 @@ public class BuildYourOwnController {
         }
     }
 
+    /**
+     * Method to add toppings to pizza on corresponding button click
+     */
     @FXML
     protected void onAddToppingButtonClick(){
         int count = 0;
@@ -149,6 +174,9 @@ public class BuildYourOwnController {
         }
     }
 
+    /**
+     * Method to remove toppings from pizza on corresponding button click
+     */
     @FXML
     protected void onRemoveToppingButtonClick(){
         int count = 0;
@@ -173,6 +201,10 @@ public class BuildYourOwnController {
         }
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to build pizza and add to current order's pizza list on corresponding button click
+     */
     @FXML
     protected void onBuildPizzaButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));
@@ -212,6 +244,10 @@ public class BuildYourOwnController {
         stage.show();
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to switch back to the main view
+     */
     @FXML
     protected void onGoBackButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));

@@ -50,6 +50,9 @@ public class OrdersController {
     Order pizzasOrdered = MainViewController.pizzasOrdered;
     DecimalFormat df = new DecimalFormat("#,###.00");
 
+    /**
+     * Called on controller startup, sets all view elements to starting configuration
+     */
     @FXML
     private void initialize(){
         warnLabel.setVisible(false);
@@ -67,6 +70,10 @@ public class OrdersController {
         pizzaSubtotal.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue()[5]));
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to swtich to the main view on "Go Back" button click
+     */
     @FXML
     private void onGoBackButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));
@@ -77,6 +84,9 @@ public class OrdersController {
         stage.show();
     }
 
+    /**
+     * Method to display/enable corresponding elements when a selection is made on the "choose an order" ComboBox
+     */
     @FXML
     private void onOrdersBoxAction(){
         pizzaTable.getItems().clear();
@@ -95,6 +105,10 @@ public class OrdersController {
         }
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to add the current order when place order button is clicked
+     */
     @FXML
     private void onPlaceOrderButtonClick(ActionEvent event) throws IOException {
         if(pizzasOrdered.getPizzas().isEmpty()){
@@ -114,6 +128,9 @@ public class OrdersController {
         stage.show();
     }
 
+    /**
+     * Method to remove the current pizza from the current order when the remove pizza button is clicked
+     */
     @FXML
     private void onRemovePizzaButtonClick(){
         if(pizzasOrdered.getPizzas().isEmpty()){

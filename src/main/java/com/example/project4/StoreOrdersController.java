@@ -55,6 +55,9 @@ public class StoreOrdersController {
     Order currOrder = MainViewController.pizzasOrdered;
     DecimalFormat df = new DecimalFormat("#,###.00");
 
+    /**
+     * Called on controller startup, sets all view elements to starting configuration
+     */
     @FXML
     private void initialize(){
         cancelOrderButton.setDisable(true);
@@ -73,6 +76,9 @@ public class StoreOrdersController {
         pizzaSubtotal.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue()[5]));
     }
 
+    /**
+     * Method to enable the cancel order button and display the selected order when an option is selected from the Orders ComboBox
+     */
     @FXML
     private void onOrdersBoxAction(){
         cancelOrderButton.setDisable(false);
@@ -95,6 +101,10 @@ public class StoreOrdersController {
         }
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to return to the main view when the "Go back" button is clicked
+     */
     @FXML
     private void onGoBackButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));
@@ -105,6 +115,9 @@ public class StoreOrdersController {
         stage.show();
     }
 
+    /**
+     * Method to cancel an order when the "Cancel order" button is clicked
+     */
     @FXML
     private void onCancelOrderButtonClick(){
         if(allOrders.getAllOrders().isEmpty()){
@@ -126,6 +139,9 @@ public class StoreOrdersController {
         cancelOrderButton.setDisable(true);
     }
 
+    /**
+     * Method to export all orders to a .txt file when "Export orders" button is clicked
+     */
     @FXML
     private void onExportOrdersButtonClick(){
         if(allOrders.getAllOrders().isEmpty()){

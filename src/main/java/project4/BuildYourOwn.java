@@ -1,11 +1,20 @@
 package project4;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class BuildYourOwn extends Pizza{
     private int numToppings;
     final static int MIN = 1;
     final static int MAX = 7;
     final static double EXTRA = 1.69;
 
+    /**
+     * Adds a topping to the Build Your Own pizza
+     * @param obj The Topping to add
+     * @return True if the topping was successfully added, false otherwise
+     */
     public boolean add(Object obj){
         if(!(obj instanceof Topping)){
             return false;
@@ -20,6 +29,11 @@ public class BuildYourOwn extends Pizza{
         return true;
     }
 
+    /**
+     * Removes a topping from the Build Your Own pizza
+     * @param obj The Topping to remove
+     * @return True if the topping was successfully removed, false otherwise
+     */
     public boolean remove(Object obj){
         if(!(obj instanceof Topping)){
             return false;
@@ -34,6 +48,9 @@ public class BuildYourOwn extends Pizza{
         return true;
     }
 
+    /**
+     * @return Double price to two decimal places, depending on size of the pizza and number of toppings
+     */
     @Override
     public double price(){
         double price = 0;

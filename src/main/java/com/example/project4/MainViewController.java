@@ -18,6 +18,11 @@ import project4.*;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
+
 public class MainViewController {
     public static Order pizzasOrdered = Order.getInstance();
     public static StoreOrders allOrders = StoreOrders.getInstance();
@@ -45,7 +50,9 @@ public class MainViewController {
     @FXML private Button viewCurrOrderButton;
     @FXML private Button viewOrdersButton;
 
-
+    /**
+     * Called on controller startup, sets all view elements to starting configuration
+     */
     @FXML
     public void initialize() {
         typeBox.getItems().addAll("Deluxe", "BBQ Chicken", "Meatzza");
@@ -65,6 +72,10 @@ public class MainViewController {
         displayTotal();
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to switch to the Build Your Own view on the corresponding button click
+     */
     @FXML
     protected void onBuildYourOwnClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("build-your-own-view.fxml"));
@@ -76,6 +87,10 @@ public class MainViewController {
         stage.show();
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to switch to the Orders view on the corresponding button click
+     */
     @FXML
     protected void onViewOrdersButtonClick(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("store-orders-view.fxml"));
@@ -86,6 +101,10 @@ public class MainViewController {
         stage.show();
     }
 
+    /**
+     * @param event The event that triggered this method
+     * Method to switch to the Current Order view on the corresponding button click
+     */
     @FXML
     protected void onViewCurrOrderButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("orders-view.fxml"));
@@ -96,6 +115,9 @@ public class MainViewController {
         stage.show();
     }
 
+    /**
+     * Method to check ComboBox selections, and display/hide corresponding elements
+     */
     private void checkBoxSelections() {
         if (typeBox.getValue() != null && styleBox.getValue() != null) {
             sizeBox.setVisible(true);
@@ -114,6 +136,9 @@ public class MainViewController {
         }
     }
 
+    /**
+     * Method to take the pizza elements from the ComboBoxes and build the pizza, and add it to the pizza list
+     */
     @FXML
     protected void buildPizza(){
         PizzaFactory pizzaFactory;
@@ -153,6 +178,9 @@ public class MainViewController {
         displayTotal();
     }
 
+    /**
+     * Method to calculate and display the subtotal and total values
+     */
     protected void displayTotal(){
         double subtotal = pizzasOrdered.getSubTotal();
         double total = pizzasOrdered.getTotal();
@@ -160,6 +188,9 @@ public class MainViewController {
         totalLabel.setText("$" + df.format(total));
     }
 
+    /**
+     * Method to display the corresponding toppings based on type of pizza chosen
+     */
     private void displayToppings(){
         toppingsListView.getItems().clear();
         if(typeBox.getValue().equals("Deluxe")) {
@@ -171,6 +202,9 @@ public class MainViewController {
         }
     }
 
+    /**
+     * Method to display the corresponding image based on type and style of pizza chosen
+     */
     private void displayPizzaImage(){
         if(typeBox.getValue().equals("Deluxe")) {
             if(styleBox.getValue().equals("New York")) {

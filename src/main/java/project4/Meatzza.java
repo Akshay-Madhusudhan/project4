@@ -1,7 +1,14 @@
 package project4;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class Meatzza extends Pizza{
 
+    /**
+     * Constructor with appropriate Toppings for Meatzza Pizza instance
+     */
     Meatzza(){
         addTopping(Topping.SAUSAGE);
         addTopping(Topping.PEPPERONI);
@@ -9,11 +16,17 @@ public class Meatzza extends Pizza{
         addTopping(Topping.HAM);
     }
 
+    /**
+     * @return String conversion of the Meatzza object
+     */
     @Override
     public String toString(){
         return super.toString();
     }
 
+    /**
+     * @return Double price to two decimal places, depending on size of the pizza
+     */
     @Override
     public double price(){
         double price = 0;

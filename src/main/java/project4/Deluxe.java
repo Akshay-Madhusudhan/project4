@@ -1,7 +1,14 @@
 package project4;
 
+/**
+ * @author Akshay Madhusudhan
+ * @author Aidan Pembleton
+ */
 public class Deluxe extends Pizza{
 
+    /**
+     * Constructor with appropriate Toppings for Deluxe Pizza instance
+     */
     Deluxe(){
         addTopping(Topping.SAUSAGE);
         addTopping(Topping.PEPPERONI);
@@ -10,11 +17,17 @@ public class Deluxe extends Pizza{
         addTopping(Topping.MUSHROOM);
     }
 
+    /**
+     * @return String conversion of the Deluxe object
+     */
     @Override
     public String toString(){
         return super.toString();
     }
 
+    /**
+     * @return Double price to two decimal places, depending on size of the pizza
+     */
     @Override
     public double price(){
         double price = 0;
